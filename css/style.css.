@@ -1,44 +1,33 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #0f0f1a;
-    color: white;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
+    margin: 0; padding: 0; height: 100%;
+    background: #050510; color: white;
+    font-family: 'Segoe UI', sans-serif; overflow: hidden;
 }
 
-#ui-overlay {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    z-index: 1000;
-    pointer-events: none;
+#ui-panel {
+    position: absolute; top: 20px; left: 50%;
+    transform: translateX(-50%); z-index: 1000;
+    background: rgba(183, 28, 28, 0.95);
+    padding: 15px 30px; border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center; border: 2px solid gold;
+    width: 320px; pointer-events: all;
 }
 
-header {
-    background: rgba(198, 40, 40, 0.9);
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 15px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-    border: 2px solid #ffffff33;
-    pointer-events: all;
-}
+.stats { display: flex; justify-content: space-between; margin-top: 10px; }
+.stat-item small { font-size: 0.6rem; letter-spacing: 1px; color: #ffcdd2; }
+.stat-item div { font-size: 1.1rem; font-weight: bold; color: gold; }
 
-.stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-}
+#map { height: 100vh; width: 100%; }
 
-.label { font-size: 0.8rem; text-transform: uppercase; margin: 0; opacity: 0.8; }
-.value { font-size: 1.2rem; font-weight: bold; margin: 5px 0 0 0; color: #ffeb3b; }
+/* Snowfall */
+#snow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+.snowflake { position: absolute; top: -10px; color: white; animation: fall linear infinite; }
+@keyframes fall { to { transform: translateY(105vh); } }
 
-#map {
-    height: 100vh;
-    width: 100%;
+/* Button */
+#audio-btn {
+    position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+    background: gold; border: none; padding: 10px 20px;
+    border-radius: 30px; cursor: pointer; font-weight: bold;
 }
