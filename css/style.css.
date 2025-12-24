@@ -1,0 +1,44 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #0f0f1a;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+header {
+    background: rgba(198, 40, 40, 0.9);
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    border: 2px solid #ffffff33;
+    pointer-events: all;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.label { font-size: 0.8rem; text-transform: uppercase; margin: 0; opacity: 0.8; }
+.value { font-size: 1.2rem; font-weight: bold; margin: 5px 0 0 0; color: #ffeb3b; }
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
