@@ -31,3 +31,27 @@ body, html {
     background: gold; border: none; padding: 10px 20px;
     border-radius: 30px; cursor: pointer; font-weight: bold;
 }
+#ticker-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00; /* Radar green color */
+    padding: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 1001;
+    border-top: 1px solid #333;
+    overflow: hidden;
+}
+
+#news-ticker {
+    white-space: nowrap;
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker 20s linear infinite;
+}
+
+@keyframes ticker {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
