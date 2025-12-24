@@ -2,22 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Live Santa Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Santa Tracker 2025</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>🎅 Santa's Flight Tracker</h1>
-        <div id="status-bar">
-            <p>Current Stop: <span id="location">North Pole</span></p>
-            <p>Presents: <span id="presents">0</span></p>
+
+    <div id="snow"></div>
+
+    <header id="ui-panel">
+        <h1>🎅 Santa Tracker Live</h1>
+        <div class="stats">
+            <div class="stat-item">
+                <small>CURRENT STOP</small>
+                <div id="location">North Pole</div>
+            </div>
+            <div class="stat-item">
+                <small>PRESENTS DELIVERED</small>
+                <div id="presents">0</div>
+            </div>
         </div>
     </header>
 
     <div id="map"></div>
 
+    <audio id="santa-sound" src="https://www.soundjay.com/holiday/santa-ho-ho-ho-01.mp3"></audio>
+    <button id="audio-btn" onclick="toggleAudio()">🔊 Unmute Sound</button>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/script.js"></script> 
+    <script src="js/script.js"></script>
 </body>
 </html>
